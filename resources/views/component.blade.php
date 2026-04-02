@@ -355,7 +355,7 @@
     <a href="#" class="nav-link active" onclick="showPage('dashboard', this)">
       <i class="bi bi-grid-fill"></i> Panoramica
     </a>
-    <a href="#" class="nav-link" onclick="showPage('projects', this)">
+    <a href="{{ route("projects.index") }}" class="nav-link">
       <i class="bi bi-folder2-open"></i> Progetti
     </a>
     <a href="#" class="nav-link" onclick="showPage('skills', this)">

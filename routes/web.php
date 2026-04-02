@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\ProjectController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,5 +30,7 @@ Route::middleware(['auth','verified'])
     ->name('index');
     
 });
+Route::resource('projects', ProjectController::class)
+->middleware(['auth','verified']);
 
 require __DIR__.'/auth.php';
