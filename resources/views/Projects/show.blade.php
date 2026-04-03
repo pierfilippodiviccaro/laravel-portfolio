@@ -68,7 +68,24 @@
         letter-spacing: 0.03em;
         transition: background 0.2s;
     ">✏️ Modifica progetto</a>
-
+    <form action="{{ route('projects.destroy', $project) }}" method="POST" style="display:inline;">
+    @csrf
+    @method('DELETE')
+    <button type="submit" style="
+        display: inline-block;
+        padding: 10px 22px;
+        background: #c0392b;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        transition: background 0.2s;
+    " onclick="return confirm('Sei sicuro di voler eliminare questo progetto?')">
+        🗑️ Elimina progetto
+    </button>
+</form>
 </div>
 
 @endsection
