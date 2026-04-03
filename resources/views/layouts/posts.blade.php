@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    @yield('form')
     
 </body>
 </html>
