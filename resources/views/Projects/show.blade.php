@@ -25,6 +25,18 @@
             margin: 0.75rem 0 0.25rem;
             line-height: 1.2;
         ">{{ $project->title }}</h1>
+        
+        
+      
+        <p style="
+        font-size: 1rem;
+        color: #444;
+        line-height: 1.75;
+        margin: 0 0 2.5rem;
+    ">categoria: {{ $type->name }}</p> 
+        
+
+
 
         <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
             <span style="font-size: 1rem; color: #666;">

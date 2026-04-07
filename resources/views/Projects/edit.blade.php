@@ -78,7 +78,25 @@
                 "
             >{{ $project ->description }}</textarea>
         </div>
-
+    
+         <div style="margin-bottom: 16px;">
+             
+              <select name="type_id" id="type_id"  style="
+                    width:100%;
+                    padding: 8px 10px;
+                    border-radius: 8px;
+                    border:1px solid #e0ddd8;
+                    background:#faf9f7;
+                    font-size:0.85rem;
+                    color:#1a1a1a;
+                    box-sizing:border-box;
+                    outline:none;
+                    resize:vertical;
+                ">
+            @foreach ($types as $type )
+            <option value="{{ $type->id }}"{{ $project->type_id == $type->id ? 'selected': ''}}>{{ $type->name }}</option>
+            @endforeach
+        </select>
         <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:4px;">
             <button type="button" class="btn-outline-custom">
                 Annulla

@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('author');
-            $table->string('description');
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+         $table->dropColumn('category');
+         $table->foreignId('type_id')->default(1)->constrained();
         });
     }
 
@@ -25,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('post');
+        Schema::table('projects', function (Blueprint $table) {
+         $table->dropForeign('projects_type_id_foreign');
+         $table->dropColumn('type_id');
+        });
     }
 };
