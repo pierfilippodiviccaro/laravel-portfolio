@@ -17,6 +17,7 @@
             @empty
                 <p>Nessun progetto trovato.</p>
             @endforelse
+           
         </div>
         
         

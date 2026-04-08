@@ -34,8 +34,14 @@
         line-height: 1.75;
         margin: 0 0 2.5rem;
     ">categoria: {{ $type->name }}</p> 
-        
-
+    
+      <div>
+        @forelse ($project->technologies as $technology )
+        <span style="background-color:{{ $technology->color }}">{{ $technology->name }}</span>
+        @empty
+        <p>nessuna tecnologia usata</p>        
+        @endforelse
+      </div>
 
 
         <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">

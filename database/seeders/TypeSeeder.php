@@ -13,7 +13,7 @@ class TypeSeeder extends Seeder
      */
     public function run(): void
     {
-        $types=["miao","cammello","creare","cianfrusaglie"];
+        $types=["miao","cammello","creare","cianfrusaglie",'canaglia',"miao-eletric-boogaloo",'colonnello','djdjjdjjd','petrolio','lol'];
         foreach($types as $type){
             $newType= new Type();
             $newType->name= $type;

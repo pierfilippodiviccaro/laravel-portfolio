@@ -87,10 +87,17 @@
             <option value="{{ $type->id }}">{{ $type->name }}</option>
             @endforeach
         </select>
+       @foreach ($technologies as $technology )
+       <input type="checkbox" name="technologies[]" value='{{ $technology->id }}' id='technology-{{ $technology->id }}'>
+       <label for="{{ $technology->id }}">{{ $technology->name }}</label>
+       @endforeach
 
         <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:4px;">
             <input type="submit" value="invia">
+            <button type="button" onclick="history.back()">torna indietro</button>
         </div>
+        
+
     </form>
 </div>
 @endsection

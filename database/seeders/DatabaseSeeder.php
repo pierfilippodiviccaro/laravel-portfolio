@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             
               TypeSeeder::class,
               ProjectSeeder::class,
+              TechnologyTableseeder::class,
+
               
               ]);
         // User::factory()->create([
